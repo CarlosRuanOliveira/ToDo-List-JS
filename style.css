@@ -1,0 +1,107 @@
+body{
+    width: 700px;
+    margin: auto;
+    background-color: #0DC6FF;
+    font-family: 'Calistoga', cursive;
+}
+header{
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+}
+fieldset{
+    min-height: 350px;
+    margin-top: 15px;
+    border-radius: 15px;
+    border-style: none;
+    box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.267);
+    background-color: white;
+}
+.itens{
+    display: flex;    
+    background-color: #155fe8c5;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.267);
+}
+.item{
+    display: block;
+    position: relative;
+    text-align: left;
+    font-size: 1.3em;
+    padding-left: 35px;
+    cursor: pointer;
+    max-width: 700px;
+    word-break: break-all;
+    color: white;
+}
+.itens:hover .checkmark{
+    background-color: #2ae8c254;
+}
+.itens:hover{
+    background-color: #155FE8;
+}
+/* Criando um input personalizado */
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+.checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+.item .checkmark:after{
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    rotate: 45deg;
+    left: 9px;
+    top: 3px;
+}
+#addTarefa{
+    display: block;
+    border: none;
+    margin: auto;
+    background-color: #2EFF79;
+    width: 600px;
+    height: 50px;
+    font-size: 1.3em;
+    text-align: center;
+    background-size: 35px;
+    background-image: url(add.png);
+    background-position: 10px;
+    background-repeat: no-repeat;
+}
+.checked{
+    text-decoration: line-through;
+    color: #2AE8C3;
+}
+.checked .checkmark{
+    background-color: #2617FF;
+
+}
+.checked .checkmark:after{
+    display: block;
+}
+.remove{
+    background-image: url(close.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    cursor: pointer;
+}
+.remove:hover{
+    background-color: #e81515;
+
+}
