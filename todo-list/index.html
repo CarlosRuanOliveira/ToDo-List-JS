@@ -14,7 +14,19 @@
 <body>
     <header>
         <h1>Todo-List</h1>
+        <div id="abrir" class="btnMenu" onclick="checked(menu)">
+        </div>
     </header>
+    <div id="menu">
+        <div id="fechar" class="btnMenu" onclick="checked(this.parentNode)">
+        </div>
+        <h2>Entre em contato comigo:</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/carlos-ruan-dev/" target="blank">Linkedin</a></li>
+            <li><a href="https://github.com/CarlosRuanOliveira/" target="blank">GitHub</a></li>
+            <li><a href="mailto://carlosruan.ti@gmail.com">Gmail</a></li>
+        </ul>
+    </div>
     <main>
         <input type="text" name="" id="addTarefa" onkeydown="teclaEnter();" placeholder="Digite e tecle ENTER para adicionar uma tarefa!">
         <fieldset id='tarefas'>
