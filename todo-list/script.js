@@ -1,30 +1,31 @@
-let taskCount = 1;
+let taskCount = 1
 /* Detecta se a tecla enter é digitada no input */
 function teclaEnter(){
+    input = document.getElementById("addTarefa").value
     document.addEventListener('keydown', function (event) {    
-                                            if (event.keyCode === 13) {
-                                                add();
+                                            if (event.keyCode === 13 && input) { /* Verifica tecla enter valor do input */
+                                                add()
                                             }
                                         }, {once: true})
 }
 /* Adiciona a tarefa na lista */
 function add(){
-    taskCount++;
-    const tarefa = document.getElementById("addTarefa").value;
-    const fieldset = document.getElementById("tarefas");
+    taskCount++
+    const tarefa = document.getElementById("addTarefa").value
+    const fieldset = document.getElementById("tarefas")
     fieldset.innerHTML += "<div class='itens' id='" + taskCount + "'><label class='item' onclick='checked(this)'>"+ tarefa +"<span class='checkmark'></span></label><span class='remove' onclick='remove(this);'></span></div>"
-    document.getElementById("addTarefa").value = "";
+    document.getElementById("addTarefa").value = ""
 }
 /* Remove uma tarefa da lista */
 function remove(e) {
-    const pai = e.parentNode;
+    const pai = e.parentNode
     if (pai.firstElementChild.classList =="item checked") {
-        pai.remove();
+        pai.remove()
     } else {
-        alert("Para excluir uma tarefa, primeiro marque-a como concluída");
+        alert("Para excluir uma tarefa, primeiro marque-a como concluída")
     }
 }
 function checked(e) {
-    const elemento = e;
-    elemento.classList.toggle('checked');
+    const elemento = e
+    elemento.classList.toggle('checked')
 }
