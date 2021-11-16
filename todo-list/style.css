@@ -5,6 +5,7 @@ body{
     background-color: #0DC6FF;
     font-family: 'Calistoga', cursive;
     overflow-x: hidden;
+    transition: 3s;
 }
 header{
     text-align: center;
@@ -14,11 +15,11 @@ header{
 #menu{
     top: 0;
     position: fixed;
-    right: -330px;
+    right: -360px;
     height: 90%;
     padding: 20px;
     background-color: #1768FF;
-    text-align: center;
+    width: 300px;
     color: white;
     transition: 1s;
 }
@@ -26,7 +27,6 @@ header{
     right: 0;
     display: block;
     width: 300px;
-    transition: 1s;
 }
 #abrir{
     background-image: url(menu.png);
@@ -50,22 +50,32 @@ header{
 }
 #menu > h2{
     margin-top: 100px;
+    text-align: center;
+    font-size: 1.8em;
 }
 #menu > ul > li{
-    text-align: center;
     list-style: none;
-    margin-top: 30px;
+    margin-top: 20px;
 }
+#menu > #tema{
+    text-align: center;
+}
+#menu > #tema > span{
+    margin-right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
 #menu > ul > li > a:hover{
     background-color: white;
     color: #1768FF;
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 #menu a:link, a:visited {
     border-radius: 10px;
     text-decoration: none;
     padding: 10px;
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: white;
 }
 fieldset{
@@ -99,7 +109,7 @@ fieldset{
     background-color: #2ae8c254;
 }
 .itens:hover{
-    background-color: #155FE8;
+    background-color: #155FE8 !important;
 }
 /* Criando um input personalizado */
 .checkmark{
@@ -140,7 +150,7 @@ fieldset{
 }
 label.checked{
     text-decoration: line-through;
-    color: #2AE8C3;
+    color: #2AE8C3 !important;
 }
 .checked .checkmark{
     background-color: #2617FF;
@@ -161,5 +171,5 @@ label.checked{
     cursor: pointer;
 }
 .remove:hover{
-    background-color: #e81515;
+    background-color: #e81515 !important;
 }

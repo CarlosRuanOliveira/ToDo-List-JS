@@ -1,10 +1,14 @@
 let taskCount = 0 // Seu valor é incrementado atribuído como o id da div ao criar adicionar uma tarefa
+let temaEscuro = false
 // Detecta se a tecla enter é digitada no input
 function teclaEnter(){
     const inputValor = document.getElementById("addTarefa").value
     document.addEventListener('keydown', function (event) {    
                                             if (event.keyCode === 13 && inputValor) { /* Verifica tecla enter valor do input */
                                                 add()
+                                                if (temaEscuro){
+                                                    escurescer()
+                                                }
                                             }
                                         }, {once: true})
 }
@@ -51,4 +55,44 @@ function remove(element) {
 }
 function checked(element) {
     element.classList.toggle('checked')
+}
+function clarear() {
+    temaEscuro = false
+    const body = document.querySelector("body")
+    const h1 = body.querySelector("h1")
+    const btnAbrir = body.querySelector("#abrir")
+    const input = body.querySelector("#addTarefa")
+    const fieldset = body.querySelector("#tarefas")
+    const tarefas = fieldset.querySelectorAll("div")
+
+    body.style.backgroundColor = "#0DC6FF"
+    btnAbrir.style.backgroundColor = "white"
+    h1.style.color = "white"
+    input.style.backgroundColor = "#2EFF79"
+    fieldset.style.backgroundColor = "white"
+
+    for (let i = 0; i < tarefas.length; i++) {
+        tarefas[i].style.backgroundColor = "#155fe8c5"
+        tarefas[i].children[0].style.color = "white"
+    }
+}
+function escurescer() {
+    temaEscuro = true
+    const body = document.querySelector("body")
+    const h1 = body.querySelector("h1")
+    const btnAbrir = body.querySelector("#abrir")
+    const input = body.querySelector("#addTarefa")
+    const fieldset = body.querySelector("#tarefas")
+    const tarefas = fieldset.querySelectorAll("div")
+
+    body.style.backgroundColor = "#033240"
+    btnAbrir.style.backgroundColor = "#0A95BF"
+    h1.style.color = "#0BB3E6"
+    input.style.backgroundColor = "#0DC6FF"
+    fieldset.style.backgroundColor = "#066380"
+
+    for (let i = 0; i < tarefas.length; i++) {
+        tarefas[i].style.backgroundColor = "#0BB3E6"
+        tarefas[i].children[0].style.color = "#033240"
+    }
 }
