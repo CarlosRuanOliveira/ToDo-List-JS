@@ -1,11 +1,10 @@
 let taskCount = 0 // Seu valor é incrementado atribuído como o id da div ao criar adicionar uma tarefa
 let temaEscuro = false
 // Detecta se a tecla enter é digitada no input
-function teclaEnter(){
-    const inputValor = document.getElementById("addTarefa").value
+function teclaEnter(input){
     document.addEventListener('keydown', function (event) {    
-                                            if (event.keyCode === 13 && inputValor) { /* Verifica tecla enter valor do input */
-                                                add()
+                                            if (event.keyCode === 13 && input.value) { /* Verifica tecla enter valor do input */
+                                                add(input)
                                                 if (temaEscuro){
                                                     escurescer()
                                                 }
@@ -13,14 +12,12 @@ function teclaEnter(){
                                         }, {once: true})
 }
 // Adiciona a tarefa na lista
-function add(){
+function add(input){
     taskCount++
-    let input = document.getElementById("addTarefa")
     const fieldset = document.getElementById("tarefas")
 
     const div = document.createElement('div')
     div.setAttribute('class', 'itens')
-    //div.setAttribute('id', localStorage.taskCount)
     div.setAttribute('id', taskCount)
 
     const label = document.createElement('label')
