@@ -7,3 +7,4 @@
   - Ao clicar no item ele é marcado como concluído e então é possível excluí-lo.  
   - Caso tente excluir uma tarefa antes de marcar como concluído, um alerta aparece instruindo a forma correta de excluir o item.  
   ![index.html](telaToDoList.png)  
+  - No menu existe a opção de alternar entre o tema claro e escuro.  
